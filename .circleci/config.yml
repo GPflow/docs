@@ -6,13 +6,4 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          name: Make notebooks
-          command: |
-           git config user.email "docs.bot@gpflow.com"
-           git config user.name "Docs Bot"
-           echo Hello World >> test.txt
-           git add test.txt
-           git commit -m "Test commit from Circle CI"
-           git push origin vincent/setup-build
       - run: echo "Notebooks created"
