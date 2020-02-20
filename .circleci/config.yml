@@ -34,4 +34,4 @@ jobs:
             git commit -m "Update notebooks [ci skip]"
             git push origin master
 
-      - run: echo "Notebooks created"
+      - run: echo "Notebooks created successfully"
