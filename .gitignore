@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# TensorFlow event logs
+events.out.tfevents.*

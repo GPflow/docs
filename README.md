@@ -1,2 +1,17 @@
-# docs
-GPflow documentation
+<div style="text-align:center">
+<img width="500" height="200" src="./doc/source/_static/gpflow_logo.svg">
+</div>
+
+[![CircleCI](https://circleci.com/gh/GPflow/docs/tree/master.svg?style=svg)](https://circleci.com/gh/GPflow/docs/tree/master.svg?style=svg)
+[![Documentation Status](https://readthedocs.org/projects/gpflow/badge/?version=master)](http://gpflow.readthedocs.io/en/master/?badge=master)
+
+[Website](https://gpflow.org) |
+[Documentation (develop/v2.0)](https://gpflow.readthedocs.io/en/develop/) |
+[Documentation (v1.5)](https://gpflow.readthedocs.io/en/v1.5.1-docs/) |
+
+# GPflow Documentation
+
+This package contains the documentation for GPflow, to be built by readthedocs.
+The `doc/` directory is automatically updated by CircleCI and hence should not be edited directly.
+The only editable files in this repository are the .circleci/config.yml and .readthedocs.yml configuration files.
+Please see [doc/README.md in the main GPflow repository](https://github.com/GPflow/GPflow/blob/develop/doc/README.md) for more information.
