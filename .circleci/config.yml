@@ -12,10 +12,14 @@ jobs:
             pip install -U pip
             pip install -q git+git://github.com/GPflow/GPflow.git
             pip install -q -r tests_requirements.txt
+            git clone --branch vincent/docs https://github.com/GPflow/GPflow.git
       - run:
           name: Make notebooks
           command: |
-            make -C notebooks -j 2
+            make -C GPflow/notebooks -j 2
+            find GPflow/notebooks -name '*.ipynb' | cpio -pdm doc/source/
+            mv doc/source/GPflow/notebooks doc/source/
+            rm -r doc/source/GPflow
       - run:
           name: Commit
           command: |
