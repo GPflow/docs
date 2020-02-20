@@ -14,7 +14,7 @@ jobs:
             pip install -U pip
             pip install -q git+git://github.com/GPflow/GPflow.git
             pip install -q -r tests_requirements.txt
-            git clone --branch vincent/docs https://github.com/GPflow/GPflow.git
+            git clone --branch develop https://github.com/GPflow/GPflow.git
       - run:
           name: Make notebooks
           command: |
