@@ -25,7 +25,8 @@ jobs:
           command: |
             git config user.email "docs.bot@gpflow.com"
             git config user.name "Docs Bot"
-            git add notebooks/intro_to_gpflow2.ipynb
+            git add -f doc/source/notebooks/*.ipynb
+            git add -f doc/source/notebooks/*/*.ipynb
             git commit -m "Update notebooks [ci skip]"
             git push origin vincent/setup-build
 
