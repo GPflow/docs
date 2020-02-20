@@ -15,5 +15,5 @@ jobs:
       - run:
           name: Make notebooks
           command: |
-            make -C notebooks
+            jupytext --execute --to notebook -o notebooks/intro_to_gpflow2.ipynb notebooks/intro_to_gpflow2.pct.py
       - run: echo "Notebooks created"
