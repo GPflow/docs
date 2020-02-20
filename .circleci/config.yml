@@ -7,13 +7,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install GPflow
-          command: |
-            pip install -U pip
-            pip install git+git://github.com/GPflow/GPflow.git
-            pip install -r tests_requirements.txt
-      - run:
           name: Make notebooks
           command: |
-            jupytext --execute --to notebook -o notebooks/intro_to_gpflow2.ipynb notebooks/intro_to_gpflow2.pct.py
+           echo Hello World >> test.txt
+           git add test.txt
+           git commit -m "Test commit from Circle CI"
+           git push origin vincent/setup-build
       - run: echo "Notebooks created"
