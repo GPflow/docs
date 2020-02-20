@@ -17,7 +17,6 @@ jobs:
           name: Make notebooks
           command: |
             make -C GPflow/notebooks -j 2
-            tar cf - $(find GPflow/notebooks -name "*.ipynb") | (cd doc/source; tar xf -)
             cp --parents GPflow/notebooks/*.ipynb doc/source
             cp --parents GPflow/notebooks/*/*.ipynb doc/source
             mv doc/source/GPflow/notebooks doc/source/
