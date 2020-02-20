@@ -1,77 +1,37 @@
-runtest: &runtest
-  steps:
-    - checkout
-    - run:
-        name: Install GPflow
-        command: |
-          pip install -U pip
-          pip install -e .
-          pip install -r tests_requirements.txt
-    - run:
-        name: Run tests
-        command: |
-          pytest -v -W ignore::UserWarning --durations=10 -m "${PYTEST_FILTER}" --cov=./gpflow ./tests
-    - run:
-        name: Upload coverage report
-        command: |
-          bash <(curl -s https://codecov.io/bash) -t "${CODECOV_TOKEN}"
-
-version: 2.1
-
+version: 2
 jobs:
-  unit-test:
-    <<: *runtest
+  build:
     docker:
-      - image: awav/tensorflow:2.0-preview
+      - image: awav/tensorflow:2.1
         environment:
-          PYTEST_FILTER: not notebooks
+          DOCS: True
 
-  notebook-test:
-    <<: *runtest
-    docker:
-      - image: awav/tensorflow:2.0-preview
-        environment:
-          PYTEST_FILTER: notebooks
-
-
-  deploy:
-    docker:
-      - image: awav/tensorflow:2.0-preview
     steps:
       - checkout
       - run:
-          name: Verify git tag vs. VERSION
+          name: Install GPflow
           command: |
-            VERSION="v$(cat VERSION | tr -d '\t\r\n ')"
-            if [ "$VERSION" != "$CIRCLE_TAG" ]; then
-              echo "The package version ($VERSION) and the latest tag version ($CIRCLE_TAG) are different"
-              exit 1
-            fi
+            pip install -U pip
+            pip install -q git+git://github.com/GPflow/GPflow.git
+            pip install -q -r tests_requirements.txt
+            git clone --branch vincent/docs https://github.com/GPflow/GPflow.git
       - run:
-          name: Install twine
+          name: Make notebooks
           command: |
-            pip install twine
+            make -C GPflow/notebooks -j 4
+            cp --parents GPflow/notebooks/*.ipynb doc/source
+            cp --parents GPflow/notebooks/*/*.ipynb doc/source
+            rm -r doc/source/notebooks
+            mv doc/source/GPflow/notebooks doc/source/
+            rm -r doc/source/GPflow
       - run:
-          name: Init .pypirc
+          name: Commit
           command: |
-            echo -e "[pypi]" >> ~/.pypirc
-            echo -e "username = artemav" >> ~/.pypirc
-            echo -e "password = $PYPI_PASSWORD" >> ~/.pypirc
-      - run:
-          name: Create pip package
-          command: |
-            python setup.py bdist_wheel sdist
-      - run:
-          name: Upload to PyPI
-          command: |
-            twine upload dist/*
+            git config user.email "docs.bot@gpflow.com"
+            git config user.name "Docs Bot"
+            git add -f doc/source/notebooks/*.ipynb
+            git add -f doc/source/notebooks/*/*.ipynb
+            git commit -m "Update notebooks [ci skip]"
+            git push origin vincent/setup-build
 
-
-workflows:
-  version: 2.1
-  build_test_and_deploy:
-    jobs:
-      - unit-test:
-          filters:
-            tags:
-              only: /^v[0-9]+(\.[0-9]+)*(-rc[0-9]+)?/
+      - run: echo "Notebooks created"
