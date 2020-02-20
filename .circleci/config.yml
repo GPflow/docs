@@ -1,8 +1,19 @@
- version: 2
- jobs:
-   build:
-     docker:
-       - image: circleci/ruby:2.4.1
-     steps:
-       - checkout
-       - run: echo "A first hello"
+version: 2
+jobs:
+  build:
+    docker:
+      - image: awav/tensorflow:2.0-preview
+
+    steps:
+      - checkout
+      - run:
+          name: Install GPflow
+          command: |
+            pip install -U pip
+            pip install git+git://https://github.com/GPflow/GPflow.git
+            pip install -r tests_requirements.txt
+      - run:
+          name: Make notebooks
+          command: |
+            make -C notebooks
+      - run: echo "Notebooks created"

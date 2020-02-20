@@ -1,0 +1,10 @@
+tensorflow-datasets
+nbformat
+nbconvert
+ipykernel
+jupyter_client
+jupytext
+
+matplotlib
+sklearn  # mixture-density-network
+ipywidgets  # Required by tensorflow-datasets
