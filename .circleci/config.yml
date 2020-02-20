@@ -2,8 +2,28 @@ version: 2
 jobs:
   build:
     docker:
-      - image: awav/tensorflow:2.0-preview
+      - image: awav/tensorflow:2.1
 
     steps:
       - checkout
+      - run:
+          name: Install GPflow
+          command: |
+            pip install -U pip
+            pip install -q git+git://github.com/GPflow/GPflow.git
+            pip install -q -r tests_requirements.txt
+      - run:
+          name: Make notebooks
+          command: |
+            which make
+            jupytext --execute --to notebook -o notebooks/intro_to_gpflow2.ipynb notebooks/intro_to_gpflow2.pct.py
+      - run:
+          name: Commit
+          command: |
+            git config user.email "docs.bot@gpflow.com"
+            git config user.name "Docs Bot"
+            git add notebooks/intro_to_gpflow2.ipynb
+            git commit -m "Update notebooks [ci skip]"
+            git push origin vincent/setup-build
+
       - run: echo "Notebooks created"
