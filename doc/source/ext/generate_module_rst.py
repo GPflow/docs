@@ -264,5 +264,4 @@ def traverse_module_bfs(queue: List[Tuple[Any, int]], enqueued_items: Set[int]):
 
 
 if __name__ == '__main__':
-    set_global_path(path):
     traverse_module_bfs([(gpflow, 0)], set([id(gpflow)]))
