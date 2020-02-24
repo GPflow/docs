@@ -3,8 +3,8 @@ jobs:
   build:
     docker:
       - image: awav/tensorflow:2.1
-        # environment:
-          # DOCS: False
+        environment:
+          DOCS: False
 
     steps:
       - checkout
@@ -29,6 +29,6 @@ jobs:
             git config user.name "Docs Bot"
             git add --all
             git commit -m "Update docs [ci skip]"
-            git push origin docs2
+            git push origin master
 
       - run: echo "Notebooks created successfully"
