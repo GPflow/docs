@@ -1,0 +1,14 @@
+pytest>=3.5.0
+pytest-random-order
+
+# Notebook tests:
+tensorflow-datasets
+nbformat
+nbconvert
+ipykernel
+jupyter_client
+jupytext
+
+matplotlib
+sklearn  # mixture-density-network
+ipywidgets  # Required by tensorflow-datasets
