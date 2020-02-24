@@ -12,7 +12,7 @@ jobs:
           command: |
             pip install -U pip
             pip install -q git+git://github.com/GPflow/GPflow.git@develop#egg=gpflow
-            git clone --branch develop https://github.com/GPflow/GPflow.git
+            git clone --branch vincent/docs2 https://github.com/GPflow/GPflow.git
             pip install -q -r GPflow/tests_requirements.txt
       - run:
           name: Make notebooks and move docs
@@ -25,7 +25,6 @@ jobs:
           name: Generate doc rst file
           command: |
             pip install -q -r docs_require.txt
-            cp doc/source/ext/generate_module_rst.py doc/source/generate_module_rst.py
             python doc/source/generate_module_rst.py
       - run:
           name: Commit
