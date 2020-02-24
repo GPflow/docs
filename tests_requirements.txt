@@ -1,3 +1,7 @@
+pytest>=3.5.0
+pytest-random-order
+
+# Notebook tests:
 tensorflow-datasets
 nbformat
 nbconvert
