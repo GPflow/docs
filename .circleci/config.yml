@@ -13,15 +13,14 @@ jobs:
           command: |
             pip install -U pip
             pip install -q git+git://github.com/GPflow/GPflow.git@develop#egg=gpflow
-            pip install -q -r tests_requirements.txt
             git clone --branch develop https://github.com/GPflow/GPflow.git
-
+            cp GPflow/tests_requirements.txt .
+            pip install -q -r tests_requirements.txt
       - run:
           name: Make notebooks and move docs
           command: |
             make -C GPflow/doc/source/notebooks -j 4
             cp -r GPflow/doc .
-            cp GPflow/tests_requirements.txt .
             cp GPflow/docs_require.txt .
       - run:
           name: Commit
