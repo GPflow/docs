@@ -5,7 +5,6 @@ jobs:
       - image: awav/tensorflow:2.1
         environment:
           DOCS: False
-
     steps:
       - checkout
       - run:
@@ -31,4 +30,4 @@ jobs:
             git commit -m "Update docs [ci skip]"
             git push origin master
 
-      - run: echo "Notebooks created successfully"
+      - run: echo "Docs created successfully"
