@@ -22,6 +22,12 @@ jobs:
             cp GPflow/docs_require.txt .
             rm -r GPflow
       - run:
+          name: Generate doc rst file
+          command: |
+            pip install -q -r docs_require.txt
+            cp doc/source/ext/generate_module_rst.py doc/source/generate_module_rst.py
+            python doc/source/generate_module_rst.py
+      - run:
           name: Commit
           command: |
             git config user.email "docs.bot@gpflow.com"
