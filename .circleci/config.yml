@@ -12,7 +12,7 @@ jobs:
           command: |
             pip install -U pip
             pip install -q git+git://github.com/GPflow/GPflow.git@develop#egg=gpflow
-            git clone --branch vincent/docs2 https://github.com/GPflow/GPflow.git
+            git clone --branch develop https://github.com/GPflow/GPflow.git
             pip install -q -r GPflow/tests_requirements.txt
             pip install -q -r GPflow/doc/requirements.txt
       - run:
