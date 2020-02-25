@@ -8,7 +8,7 @@ sphinx:
 formats: []
 
 conda:
-  file: doc/env.yml
+  environment: doc/environment.yml
 
 python:
   version: 3.7
