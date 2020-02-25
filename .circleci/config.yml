@@ -20,7 +20,6 @@ jobs:
           command: |
             make -C GPflow/doc/source/notebooks -j 4
             cp -r GPflow/doc .
-            rm -r GPflow
       - run:
           name: Generate doc rst file
           command: |
