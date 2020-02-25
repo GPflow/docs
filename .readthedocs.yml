@@ -12,4 +12,4 @@ python:
   install:
     - requirements: doc/requirements.txt
     - method: setuptools
-        path: GPflow
+      path: GPflow
