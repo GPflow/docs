@@ -32,6 +32,6 @@ jobs:
             git config user.name "Docs Bot"
             git add --all
             git commit -m "Update docs [ci skip]"
-            git push origin master
+            git push origin develop
 
       - run: echo "Docs created successfully"
