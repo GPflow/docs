@@ -8,10 +8,22 @@ gpflow.utilities
 
 
 
-gpflow.utilities.deepcopy_components
+gpflow.utilities.deepcopy
 ------
 
-.. autofunction:: gpflow.utilities.deepcopy_components
+.. autofunction:: gpflow.utilities.deepcopy
+
+
+gpflow.utilities.freeze
+------
+
+.. autofunction:: gpflow.utilities.freeze
+
+
+gpflow.utilities.getattr_by_path
+------
+
+.. autofunction:: gpflow.utilities.getattr_by_path
 
 
 gpflow.utilities.leaf_components
@@ -50,10 +62,22 @@ gpflow.utilities.read_values
 .. autofunction:: gpflow.utilities.read_values
 
 
+gpflow.utilities.reset_cache_bijectors
+------
+
+.. autofunction:: gpflow.utilities.reset_cache_bijectors
+
+
 gpflow.utilities.set_trainable
 ------
 
 .. autofunction:: gpflow.utilities.set_trainable
+
+
+gpflow.utilities.setattr_by_path
+------
+
+.. autofunction:: gpflow.utilities.setattr_by_path
 
 
 gpflow.utilities.tabulate_module_summary

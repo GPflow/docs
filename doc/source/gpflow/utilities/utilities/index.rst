@@ -8,12 +8,6 @@ gpflow.utilities.utilities
 
 
 
-gpflow.utilities.utilities.reset_cache_bijectors
-~~~~~~
-
-.. autofunction:: gpflow.utilities.utilities.reset_cache_bijectors
-
-
 gpflow.utilities.utilities.traverse_module
 ~~~~~~
 
