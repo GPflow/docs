@@ -8,12 +8,6 @@ gpflow.utilities.ops
 
 
 
-gpflow.utilities.ops.add_to_diagonal
-~~~~~~
-
-.. autofunction:: gpflow.utilities.ops.add_to_diagonal
-
-
 gpflow.utilities.ops.broadcasting_elementwise
 ~~~~~~
 
