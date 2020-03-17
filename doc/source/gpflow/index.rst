@@ -42,6 +42,12 @@ gpflow.default_jitter
 .. autofunction:: gpflow.default_jitter
 
 
+gpflow.set_trainable
+======
+
+.. autofunction:: gpflow.set_trainable
+
+
 gpflow.base
 ======
 .. toctree::

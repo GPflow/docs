@@ -68,12 +68,6 @@ gpflow.utilities.reset_cache_bijectors
 .. autofunction:: gpflow.utilities.reset_cache_bijectors
 
 
-gpflow.utilities.set_trainable
-------
-
-.. autofunction:: gpflow.utilities.set_trainable
-
-
 gpflow.utilities.setattr_by_path
 ------
 
