@@ -11,4 +11,7 @@
 
 # GPflow Documentation
 
-This package contains the documentation for GPflow.
+This package contains the documentation for GPflow, to be built by readthedocs.
+The `doc/` directory is automatically updated by CircleCI and hence should not be edited directly.
+The only editable files in this repository are the .circleci/config.yml and .readthedocs.yml configuration files.
+Please see [doc/README.md in the main GPflow repository](https://github.com/GPflow/GPflow/blob/develop/doc/README.md) for more information.
