@@ -24,6 +24,14 @@ gpflow.models.BayesianModel
    :members:
 
 
+gpflow.models.ExternalDataTrainingLossMixin
+-------------------------------------------
+
+.. autoclass:: gpflow.models.ExternalDataTrainingLossMixin
+   :show-inheritance:
+   :members:
+
+
 gpflow.models.GPLVM
 -------------------
 
@@ -60,6 +68,14 @@ gpflow.models.GPRFITC
 ---------------------
 
 .. autoclass:: gpflow.models.GPRFITC
+   :show-inheritance:
+   :members:
+
+
+gpflow.models.InternalDataTrainingLossMixin
+-------------------------------------------
+
+.. autoclass:: gpflow.models.InternalDataTrainingLossMixin
    :show-inheritance:
    :members:
 
@@ -102,6 +118,24 @@ gpflow.models.VGPOpperArchambeau
 .. autoclass:: gpflow.models.VGPOpperArchambeau
    :show-inheritance:
    :members:
+
+
+gpflow.models.maximum_log_likelihood_objective
+----------------------------------------------
+
+.. autofunction:: gpflow.models.maximum_log_likelihood_objective
+
+
+gpflow.models.training_loss
+---------------------------
+
+.. autofunction:: gpflow.models.training_loss
+
+
+gpflow.models.training_loss_closure
+-----------------------------------
+
+.. autofunction:: gpflow.models.training_loss_closure
 
 
 gpflow.models.model
