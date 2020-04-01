@@ -11,8 +11,8 @@ jobs:
           name: Install GPflow
           command: |
             pip install -U pip
-            pip install -q git+git://github.com/GPflow/GPflow.git@develop#egg=gpflow
-            git clone --branch develop https://github.com/GPflow/GPflow.git
+            pip install -q gpflow==2.0.0
+            git clone --branch master https://github.com/GPflow/GPflow.git
             pip install -q -r GPflow/tests_requirements.txt
       - run:
           name: Make notebooks and move docs
@@ -32,6 +32,6 @@ jobs:
             git config user.name "Docs Bot"
             git add --all
             git commit -m "Update docs [ci skip]"
-            git push origin develop
+            git push origin master
 
       - run: echo "Docs created successfully"
