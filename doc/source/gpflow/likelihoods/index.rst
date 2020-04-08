@@ -136,11 +136,11 @@ gpflow.likelihoods.SwitchedLikelihood
    :members:
 
 
-gpflow.likelihoods.likelihoods
-------------------------------
-.. automodule:: gpflow.likelihoods.likelihoods
+gpflow.likelihoods.utils
+------------------------
+.. automodule:: gpflow.likelihoods.utils
 .. toctree::
    :maxdepth: 1
 
-   likelihoods/index
+   utils/index
 
