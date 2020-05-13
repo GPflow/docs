@@ -11,7 +11,7 @@ jobs:
           name: Install GPflow
           command: |
             pip install -U pip
-            pip install -q gpflow==2.0.1
+            pip install -q gpflow==2.0.3
             git clone --branch master https://github.com/GPflow/GPflow.git
             pip install -q -r GPflow/tests_requirements.txt
       - run:
