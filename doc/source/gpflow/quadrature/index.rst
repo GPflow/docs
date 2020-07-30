@@ -8,6 +8,22 @@ gpflow.quadrature
 
 
 
+gpflow.quadrature.GaussianQuadrature
+------------------------------------
+
+.. autoclass:: gpflow.quadrature.GaussianQuadrature
+   :show-inheritance:
+   :members:
+
+
+gpflow.quadrature.NDiagGHQuadrature
+-----------------------------------
+
+.. autoclass:: gpflow.quadrature.NDiagGHQuadrature
+   :show-inheritance:
+   :members:
+
+
 gpflow.quadrature.hermgauss
 ---------------------------
 
@@ -36,4 +52,22 @@ gpflow.quadrature.ndiagquad
 ---------------------------
 
 .. autofunction:: gpflow.quadrature.ndiagquad
+
+
+gpflow.quadrature.deprecated
+----------------------------
+.. automodule:: gpflow.quadrature.deprecated
+.. toctree::
+   :maxdepth: 1
+
+   deprecated/index
+
+
+gpflow.quadrature.gauss_hermite
+-------------------------------
+.. automodule:: gpflow.quadrature.gauss_hermite
+.. toctree::
+   :maxdepth: 1
+
+   gauss_hermite/index
 
