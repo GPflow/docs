@@ -5,9 +5,9 @@
 [![CircleCI](https://circleci.com/gh/GPflow/docs/tree/master.svg?style=svg)](https://circleci.com/gh/GPflow/docs/tree/master.svg?style=svg)
 [![Documentation Status](https://readthedocs.org/projects/gpflow/badge/?version=master)](http://gpflow.readthedocs.io/en/master/?badge=master)
 
-[Website](https://gpflow.org) |
-[Documentation (master/latest 2.x release)](https://gpflow.readthedocs.io/en/master/) |
-[Documentation (develop/nightly)](https://gpflow.readthedocs.io/en/develop/) |
+[Website](https://gpflow.org)
+| [Documentation (master/latest 2.x release)](https://gpflow.readthedocs.io/en/master/)
+| [Documentation (develop/nightly)](https://gpflow.readthedocs.io/en/develop/)
 
 # GPflow Documentation
 
