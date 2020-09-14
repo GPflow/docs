@@ -5,10 +5,9 @@
 [![CircleCI](https://circleci.com/gh/GPflow/docs/tree/master.svg?style=svg)](https://circleci.com/gh/GPflow/docs/tree/master.svg?style=svg)
 [![Documentation Status](https://readthedocs.org/projects/gpflow/badge/?version=master)](http://gpflow.readthedocs.io/en/master/?badge=master)
 
-[Website](https://gpflow.org) |
-[Documentation (master/latest 2.x release)](https://gpflow.readthedocs.io/en/master/) |
-[Documentation (develop/nightly)](https://gpflow.readthedocs.io/en/develop/) |
-[Documentation (old v1.5)](https://gpflow.readthedocs.io/en/v1.5.1-docs/) |
+[Website](https://gpflow.org)
+| [Documentation (master/latest 2.x release)](https://gpflow.readthedocs.io/en/master/)
+| [Documentation (develop/nightly)](https://gpflow.readthedocs.io/en/develop/)
 
 # GPflow Documentation
 
@@ -19,4 +18,5 @@ Please see [doc/README.md in the main GPflow repository](https://github.com/GPfl
 
 ## Issues with the docs?
 
-This repository is only used for hosting auto-generated docs - if you find any issue with the GPflow documentation, please [open an issue](https://github.com/GPflow/GPflow/issues/new?template=doc-issue.md) (or contribute your suggestion/fix/improvement directly through [opening a pull request](https://github.com/GPflow/GPflow/compare)) on the main [GPflow repository](https://github.com/GPflow/GPflow/). Thanks!
+**Check the main [GPflow repository](https://github.com/GPflow/GPflow/)!**
+This repository is only used for hosting auto-generated docs - if you find any issue with the GPflow documentation, please [open an issue](https://github.com/GPflow/GPflow/issues/new?template=doc-issue.md) (or contribute your suggestion/fix/improvement directly through [opening a pull request](https://github.com/GPflow/GPflow/compare)) over there. Thanks!
