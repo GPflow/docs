@@ -8,7 +8,6 @@
 [Website](https://gpflow.org) |
 [Documentation (master/latest 2.x release)](https://gpflow.readthedocs.io/en/master/) |
 [Documentation (develop/nightly)](https://gpflow.readthedocs.io/en/develop/) |
-[Documentation (old v1.5)](https://gpflow.readthedocs.io/en/v1.5.1-docs/) |
 
 # GPflow Documentation
 
