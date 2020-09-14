@@ -18,4 +18,5 @@ Please see [doc/README.md in the main GPflow repository](https://github.com/GPfl
 
 ## Issues with the docs?
 
-This repository is only used for hosting auto-generated docs - if you find any issue with the GPflow documentation, please [open an issue](https://github.com/GPflow/GPflow/issues/new?template=doc-issue.md) (or contribute your suggestion/fix/improvement directly through [opening a pull request](https://github.com/GPflow/GPflow/compare)) on the main [GPflow repository](https://github.com/GPflow/GPflow/). Thanks!
+**Check the main [GPflow repository](https://github.com/GPflow/GPflow/)!**
+This repository is only used for hosting auto-generated docs - if you find any issue with the GPflow documentation, please [open an issue](https://github.com/GPflow/GPflow/issues/new?template=doc-issue.md) (or contribute your suggestion/fix/improvement directly through [opening a pull request](https://github.com/GPflow/GPflow/compare)) over there. Thanks!
