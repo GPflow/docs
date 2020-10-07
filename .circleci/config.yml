@@ -11,9 +11,9 @@ jobs:
           name: Install GPflow
           command: |
             pip install -U pip
-            pip install -q git+git://github.com/GPflow/GPflow.git@develop#egg=gpflow
+            pip install --use-feature=2020-resolver git+git://github.com/GPflow/GPflow.git@develop#egg=gpflow
             git clone --branch develop https://github.com/GPflow/GPflow.git
-            pip install -q -r GPflow/tests_requirements.txt
+            pip install --use-feature=2020-resolver -r GPflow/tests_requirements.txt
       - run:
           name: Make notebooks and move docs
           command: |
