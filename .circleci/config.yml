@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: awav/tensorflow:2.1
+      - image: circleci/python:3.6-buster
         environment:
           DOCS: True
     steps:
@@ -20,7 +20,7 @@ jobs:
             make -C GPflow/doc/source/notebooks -j 4
             rm -r doc
             cp -r GPflow/doc .
-            rm -r GPflow
+            rm -rf GPflow
       - run:
           name: Generate doc rst file
           command: |
