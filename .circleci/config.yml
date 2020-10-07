@@ -17,6 +17,9 @@ jobs:
       - run:
           name: Make notebooks and move docs
           command: |
+            # attempt building notebooks three times to work around kernel crashes:
+            make -k -C GPflow/doc/source/notebooks -j 4
+            make -k -C GPflow/doc/source/notebooks -j 4
             make -C GPflow/doc/source/notebooks -j 4
             rm -r doc
             cp -r GPflow/doc .
