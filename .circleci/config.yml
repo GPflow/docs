@@ -11,13 +11,17 @@ jobs:
           name: Install GPflow
           command: |
             pip install -U pip
-            pip install -q git+git://github.com/GPflow/GPflow.git@master#egg=gpflow
+            pip install --use-feature=2020-resolver git+git://github.com/GPflow/GPflow.git@master#egg=gpflow
             git clone --branch master https://github.com/GPflow/GPflow.git
-            pip install -q -r GPflow/tests_requirements.txt
+            pip install --use-feature=2020-resolver -r GPflow/tests_requirements.txt
       - run:
           name: Make notebooks and move docs
           command: |
-            make -C GPflow/doc/source/notebooks -j 4
+            # attempt building notebooks three times to work around kernel crashes, using less parallel jobs each time:
+            make -k -C GPflow/doc/source/notebooks -j 4
+            make -k -C GPflow/doc/source/notebooks -j 2
+
+            make -C GPflow/doc/source/notebooks -j 1
             rm -r doc
             cp -r GPflow/doc .
             rm -rf GPflow
