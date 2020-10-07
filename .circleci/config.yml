@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: awav/tensorflow:2.1
+      - image: circleci/python:3.6-buster
         environment:
           DOCS: True
     steps:
@@ -33,5 +33,5 @@ jobs:
             git add --all
             git commit -m "Update docs [ci skip]"
             git push origin master
-
+            bash tag-stable.sh
       - run: echo "Docs created successfully"
